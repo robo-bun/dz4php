@@ -120,20 +120,82 @@ echo $result;
 WHILE        
 // 7. Задача на поиск суммы нечетных чисел от 1 до N:
 
-$num = 10;
-$sum = 0;
-$i = 1;
+function sumSearch($num) {
+    $sum = 0;
+    $i = 1;
 
-while ($i < $num) {
-
+    while ($i <= $num) {
+        if ($i % 2 == 0) {
+            $sum = $sum + $i; //sum += i;
+        }
+        $i++;
+    }
+    return $sum;
 }
+sumSearch(10);
+                     
+                     
+                     
+                     
+// 8. Задача на поиск первого положительного числа, кратного 7:
+                     
+function numSearch($num) {
+    $i = $num;
+
+    while (true) {
+        if ($i % 7 == 0) {
+            return $i;
+        }
+        $i++;
+    }
+}
+$num = 23;
+$firstFoundNum = numSearch($num);
+echo "первое положительное число, кратное 7: $firstFoundNum";                     
+                     
+                     
         
         
+FOR
+// 9. Поиск суммы элементов массива:
+
+$numbers = [1, 2, 3, 4, 5];
+$sum = 0;
+for($i = 0; $i < count($numbers); $i++) {
+    $sum += $numbers[$i];
+}
+echo $sum;        
         
         
+
         
-        
-        
+// 10. Собрать массив четных чисел из входного массива:
+
+$numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+$evenNumbers = [];
+for($i = 0; $i < count($numbers); $i++) {
+    if ($numbers[$i] % 2 == 0) {
+        array_push($evenNumbers, $numbers[$i]);
+    }
+}
+print_r($evenNumbers);        
+                                 
+                                 
+                                 
+                                 
+FOREACH                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
         
         
         
