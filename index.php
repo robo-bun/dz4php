@@ -184,18 +184,35 @@ print_r($evenNumbers);
                                  
                                  
 FOREACH                                 
+// 11. Добавить новый элемент в ассоциативный массив и вывести все значения данного массива 
+                                 
+$array = [
+    'fruit' => 'mango',
+    'vegetable' => 'potatoe',
+    'drink' => 'tea'];
+$array['dessert'] = 'ice cream';
+foreach ($array as $key => $value) {
+    echo '<pre>';
+    print_r($array);
+    echo '</pre>';
+}                                 
                                  
                                  
                                  
                                  
-                                 
-                                 
-                                 
-                                 
-                                 
-                                 
-                                 
-                                 
-        
-        
-        
+// 12. Объединение нескольких ассоциативных массивов в один и вывести результат (ключ, значение), через foreach
+
+$arrayFirst = [
+    'fruit' => 'mango',
+    'vegetable' => 'potatoe',
+    'drink' => 'tea'];
+$arraySecond = [
+    'dessert' => 'ice cream',
+    'meat' => 'beef',
+    'berry' => 'cherry'];
+$arrayMerge = array_merge($arrayFirst, $arraySecond);
+foreach ($arrayMerge as $key => $value) {
+    echo '<pre>';
+    print_r($arrayMerge);
+    echo '</pre>';
+}
